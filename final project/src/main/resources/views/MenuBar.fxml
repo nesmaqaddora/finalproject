@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuBarController">
+    <menus>
+        <Menu text="File">
+            <items>
+                <MenuItem onAction="#handleExit" text="Exit Program" />
+            </items>
+        </Menu>
+        <Menu text="Format">
+            <items>
+                <Menu text="Font Size">
+                    <items>
+                        <MenuItem onAction="#handleFontSmall" text="Small (12px)" />
+                        <MenuItem onAction="#handleFontMedium" text="Medium (16px)" />
+                        <MenuItem onAction="#handleFontLarge" text="Large (20px)" />
+                    </items>
+                </Menu>
+                <Menu text="Font Family">
+                    <items>
+                        <MenuItem onAction="#handleFontSystem" text="System Default" />
+                        <MenuItem onAction="#handleFontArial" text="Arial" />
+                        <MenuItem onAction="#handleFontCourier" text="Courier New" />
+                    </items>
+                </Menu>
+                <SeparatorMenuItem />
+                <MenuItem onAction="#handleToggleTheme" text="Toggle Dark / Light Mode" />
+            </items>
+        </Menu>
+        <Menu text="Help">
+            <items>
+                <MenuItem onAction="#handleAbout" text="About System" />
+            </items>
+        </Menu>
+    </menus>
+</MenuBar>
